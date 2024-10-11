@@ -45,3 +45,7 @@ Ahora enlistare los otros formatos desde el que pesa más hasta el que pesa meno
 *** ttf
 *** woff
 *** woff2
+
+** Img del ejemplo
+
+[[https://imgur.com/S2azL0A.png]]
