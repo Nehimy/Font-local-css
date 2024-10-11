@@ -1,7 +1,30 @@
-/*
-   El valor border-box en el box-sizing hace que el padding y el border pasen a formar parte
-   del cálculo del ancho de la caja.
- */
+@font-face {
+  font-family: "Freeman Regular";
+  src:
+    local(Freeman-Regular),
+    /* url("fonts/Freeman-Regular.svg"); */
+    url("fonts/Freeman-Regular.ttf") format("ttf"),
+    url("fonts/Freeman-Regular.woff") format("woff"),
+    url("fonts/Freeman-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: HammersmithOne;
+  src:
+    local(HammersmithOne),
+    url(fonts/HammersmithOne-Regular.woff),
+    url('fonts/HammersmithOne-Regular.woff2');
+}
+
+@font-face {
+  font-family: AltamonteNF;
+  src:
+    local(AltamonteNF),
+    url(fonts/AltamonteNF.woff2),
+    url("fonts/AltamonteNF.woff") format("woff"),
+    url('fonts/AltamonteNF.ttf') format('ttf');
+}
+
 
 *{
   margin: 0px;
@@ -9,3 +32,27 @@
   box-sizing: border-box;
 }
 
+
+h1 {
+  font-family: 'Freeman Regular', Arial;
+  font-weight: 900;
+  color: #00a4ff;
+}
+
+h2 {
+  font-family: HammersmithOne;
+  color: #005880;
+}
+
+h3 {
+  font-family: AltamonteNF;
+  color: #58c3f3;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+}
