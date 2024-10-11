@@ -1,0 +1,47 @@
+#+title:  Example Org File
+#+author: Ney
+#+date:   2024-11-11
+
+* ¿Cómo insertar fonts de forma local con css?
+
+Hace ya mucho tiempo tube esta duda; pero apenas hasta ayer me animo a parender.
+
+Para colocar un font en nuestro archivo html hacemos esto:
+
+- Primero tenemos que descargar el font que nos gusta.
+- Luego, dento de la carpeta en la cual esta nuestro archivo html creamos una carpeta (llamada fonts).
+- Pegamos nuetro font dentro de esa carpeta.
+- En el archivo css (en mi caso style.css), escribimos el código.
+
+
+#+begin_src css
+@font-face {
+    font-family: HammersmithOne;
+    src:
+    local(HammersmithOne),
+    url(fonts/HammersmithOne-Regular.woff),
+    url('fonts/HammersmithOne-Regular.woff2');
+}
+#+end_src
+
+@font-face     : Es una regla de css que nos indica que podemos añadir funtes desde un servidor remoto o de forma local.
+
+font-family    : Es donde colocamos el nombre que tendrá nuestro font.
+
+src            : Aquí va la la ruta de nuestro font.
+
+url() y local(): La diferencia entre estas 2 es que local toma el font local del dispositivo del usuario; pero si este
+font no se encuentra entonces lo descarga desde url().
+
+El orden de las lineas inporta, por eso local() deve ir primero para que de esta forma si el usuario ya tiene el font, no lo descarge.
+
+
+** Formatos de fonts
+Llegue a ver ttf, woff, woff2 y svg.
+
+Lo mestacable es que el formato svg  de momento solo es soportado en safari.
+Ahora enlistare los otros formatos desde el que pesa más hasta el que pesa menos.
+
+*** ttf
+*** woff
+*** woff2
